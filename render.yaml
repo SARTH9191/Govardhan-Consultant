@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: buildcraft-luxe-showcase
+    env: node
+    buildCommand: npm install --legacy-peer-deps && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
